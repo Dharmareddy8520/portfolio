@@ -5,9 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/chat.css">
+        <!-- <link rel="stylesheet" href="/css/scrool.css"> -->
+         <script src="js/chat.js"></script>
+         <!-- <script src="js/scrool.js"></script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <!--
+        mailchimp
+      -->
+      <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/5c7e47281fc7fee698ee73ea7/82a7ee46ab04ba29d6a6aeb75.js");</script>
+        <!--mailchimp-->
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -204,7 +213,29 @@
                           </div>
                 </div>
             </section>
+ 
 
+            <!--== chatbot==-->
+
+
+            <div class="chatbot-container">
+                <button class="open-button" onclick="openForm()"><img src="https://img.freepik.com/premium-vector/robot-icon-bot-sign-design-chatbot-symbol-concept-voice-support-service-bot-online-support-bot-vector-stock-illustration_100456-34.jpg?w=2000" alt="Chatbot"></button>
+                <div class="chatbot-form" id="chatbot-form">
+                    <div class="chatbot-header">
+                        <h3>Chatbot</h3>
+                        <button class="close-button" onclick="closeForm()">X</button>
+                    </div>
+                    <div class="chatbot-body">
+                        <div class="chatbot-messages" id="chatbot-messages">
+                            <p>Welcome to the chatbot!</p>
+                        </div>
+                        <div class="chatbot-input">
+                            <input type="text" id="chatbot-input" placeholder="Type your message...">
+                            <button onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         <!--===== FOOTER =====-->
@@ -221,6 +252,7 @@
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
+        
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
